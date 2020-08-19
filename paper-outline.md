@@ -11,7 +11,6 @@ Outline of paper, and todo list for graphs
         - careful about overselling impact; don't too many figures on market shares and stuff
         - "impacts processors since sandy bridge (20xx)" would be enough
         - mention that ARM has decoded op caches too, 
-
 - intro
 - related work
     - [ ] Need to populate [[references]]
@@ -36,8 +35,16 @@ Outline of paper, and todo list for graphs
     - merge into DSB background
 
 - attack models we tried (maybe divide into covert & side channels, or covert & transient attack)
+    - tables, data, and graphics for responsible disclosure
+        - [ ] flesh out generate_stripes.py section
+        - [ ] bandwidth
+        - [ ] err rate
+        - [ ] ECC? use error corrected 7z for this; deflation ratio
+    - not in rd, but definitely in paper:
+        - pfc on covert and LLC MPKI for intel, over time for reviewers
+        - not gadget search for rd, but for paper gadget search good
     - single threaded
-        - [ ] bandwidth?
+        - [ ] bandwidth for all ?
     - sgx (doesn't work)
         - flushes
         - sgx is heavyweight
@@ -48,8 +55,11 @@ Outline of paper, and todo list for graphs
         - 
     - speculative
         - [ ] bandwidth
-    - potentially: side-channel attack on actual library
-
+    - potentially: side-channel attack on actual library (nah)
+- related works
+    - https://gruss.cc/files/transient-defenses.pdf
+    - https://gruss.cc/files/transient-defenses.pdf
+    - see defences, consider bypassing
 - why potential mitigations can be hard to implement
     - general case [Lyu, Yangdi & Mishra, Prabhat. (2017). A Survey of Side-Channel Attacks on Caches and Countermeasures. Journal of Hardware and Systems Security. 10.1007/s41635-017-0025-y. ]
         - flush dsb on transition lol (slow)
